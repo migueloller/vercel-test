@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    {
+      "source": "/:path(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?<host>.+)"
+        }
+      ],
+      "destination": "https://review-miguel-migration.makeswift.site/:path?x-host=$host"
+    }
+  ]
+}
